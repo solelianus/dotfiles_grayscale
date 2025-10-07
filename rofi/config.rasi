@@ -1,0 +1,15 @@
+/**
+ * ~/.config/rofi/config.rasi
+ */
+
+configuration {
+    modi:               "drun,run,window";
+    show-icons:         true;
+    icon-theme:         "Papirus";
+    drun-display-format: "{name}";
+    location:           0;
+    sidebar-mode:       false;
+    font:               "JetBrainsMono Nerd Font 11";
+}
+
+@theme "~/.config/rofi/theme.rasi"

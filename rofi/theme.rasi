@@ -1,0 +1,80 @@
+/**
+ * ~/.config/rofi/theme.rasi
+ */
+
+* {
+    /* Color Palette: Grayscale */
+    background: #f0f0f0; /* Main background */
+    foreground: #222222; /* Main text color */
+    selected:   #ADADAD; /* Accent/highlight color */
+
+    /* Global Properties */
+    font:             "JetBrainsMono Nerd Font 12";
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+window {
+    background-color: @background;
+    width:            50%;
+    padding:          20px;
+    border:           1px;
+    border-radius:    12px;
+    border-color:     @selected;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  15px;
+    padding:  10px;
+}
+
+inputbar {
+    children:         [ prompt, entry ];
+    background-color: #C9C9C9;
+    padding:          10px;
+    border-radius:    8px;
+    spacing:          10px;
+}
+
+prompt {
+    text-color: @selected;
+}
+
+entry {
+    placeholder:       "Search...";
+    placeholder-color: #6c7086;
+}
+
+listview {
+    columns: 1;
+    lines:   8;
+    spacing: 10px;
+}
+
+element {
+    padding:       10px;
+    border-radius: 8px;
+    orientation:   horizontal;
+}
+
+element-icon {
+    size:   24px;
+    cursor: inherit;
+}
+
+element-text {
+    vertical-align: 0.5;
+    cursor:         inherit;
+    margin:         0 0 0 10px;
+}
+
+element.normal.normal {
+    background-color: @alt-bg;
+    text-color:       @foreground;
+}
+
+element.selected.normal {
+    background-color: @selected;
+    text-color:       @background;
+}
